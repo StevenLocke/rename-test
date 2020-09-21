@@ -1,0 +1,13 @@
+name: basic-action
+on: [push, pull_request]
+jobs:
+  action1:
+    name: Action1
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Run date
+      run: |
+        set -e -x
+        date
